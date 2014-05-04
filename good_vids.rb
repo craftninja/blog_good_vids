@@ -16,4 +16,10 @@ class GoodVids < Sinatra::Application
     redirect '/'
   end
 
+  get '/:id' do
+    good_vids_table = DB[:good_vids]
+    vid = good_vids_table.where(id: params[:id]).first
+    erb :show, :locals => {:vid => vid}
+  end
+
 end

@@ -6,6 +6,6 @@
 <hr>
 <ul>
   <% vids.each do |vid| %>
-    <li><%= vid[:vid_name] %> | <%= vid[:vid_url] %></li>
+    <li><a href="/<%= vid[:id] %>"><%= vid[:vid_name] %></a> | <%= vid[:vid_url] %></li>
   <% end %>
 </ul>
