@@ -1,0 +1,6 @@
+<form action="/<%= vid[:id] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" id="Video Name" value="<%= vid[:vid_name]%>" name="video_name"/>
+  <input type="text" value="<%= vid[:vid_url]%>" name="video_url"/>
+  <input type="submit" value="Update"/>
+</form>

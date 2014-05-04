@@ -38,4 +38,19 @@ feature 'User can manage a list of videos' do
     expect(page).to have_content(video_url)
   end
 
+  scenario 'User can update videos' do
+    visit '/'
+    old_video_name = 'BED INTRUDER SONG!!! (now on iTunes)'
+    updated_video_name = 'Bed Intruder'
+    video_url = 'http://www.youtube.com/watch?v=hMtZfW2z9dw'
+    fill_in 'Video Name', with: old_video_name
+    fill_in 'Video URL', with: video_url
+    click_on 'Add'
+    click_on old_video_name
+    click_on 'Edit'
+    fill_in 'Video Name', with: updated_video_name
+    click_on 'Update'
+    expect(page).to have_content(updated_video_name)
+  end
+
 end
