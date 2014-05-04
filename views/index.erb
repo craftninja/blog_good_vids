@@ -3,3 +3,9 @@
   <input type="text" placeholder="Video URL" name="video_url"/>
   <input type="submit" value="Add">
 </form>
+<hr>
+<ul>
+  <% vids.each do |vid| %>
+    <li><%= vid[:vid_name] %> | <%= vid[:vid_url] %></li>
+  <% end %>
+</ul>

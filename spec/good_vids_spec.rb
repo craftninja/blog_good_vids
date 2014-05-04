@@ -5,6 +5,10 @@ Capybara.app = GoodVids
 
 feature 'User can manage a list of videos' do
 
+  before do
+    DB[:good_vids].delete
+  end
+
   scenario 'User is welcomed on homepage' do
     visit '/'
     welcome = 'Welcome to the amazing collection of Good Vids'
