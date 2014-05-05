@@ -1,5 +1,9 @@
 # README
 
+# Good Vids basic Postgres Sinatra CRUD app
+
+This is the project from [the blog post at Emily Platzer Makes Things](http://emily-platzer-makes-things.herokuapp.com/2014/05/05/sinatra-postgres-app.html).
+
 # create databases
 
 CD into project directory and run the following in the command line:
