@@ -4,6 +4,14 @@
 
 This is the project from [the blog post at Emily Platzer Makes Things](http://emily-platzer-makes-things.herokuapp.com/2014/05/05/sinatra-postgres-app.html).
 
+# get this project rolling
+
+* fork it
+* clone it
+* bundle it
+* create databases and tables
+* bask in the awesome
+
 # create databases
 
 CD into project directory and run the following in the command line:
@@ -13,3 +21,5 @@ CD into project directory and run the following in the command line:
 
     $ sequel -m migrations postgres://<username>:<password>@localhost/good_vids_development
     $ sequel -m migrations postgres://<username>:<password>@localhost/good_vids_test
+
+# Fork it! Clone it! Run it! Change it!
