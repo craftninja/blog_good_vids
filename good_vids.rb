@@ -37,4 +37,10 @@ class GoodVids < Sinatra::Application
     redirect '/'
   end
 
+  delete '/:id' do
+    good_vids_table = DB[:good_vids]
+    good_vids_table.where(:id => params[:id]).delete
+    redirect '/'
+  end
+
 end

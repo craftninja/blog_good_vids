@@ -53,4 +53,16 @@ feature 'User can manage a list of videos' do
     expect(page).to have_content(updated_video_name)
   end
 
+  scenario 'User can delete videos' do
+    visit '/'
+    video_name = 'Baby Bunny - Parry Gripp'
+    video_url = 'http://www.youtube.com/watch?v=aD9xQaDAuQw'
+    fill_in 'Video Name', with: video_name
+    fill_in 'Video URL', with: video_url
+    click_on 'Add'
+    click_on video_name
+    click_on 'Delete'
+    expect(page).to have_no_content(video_name)
+  end
+
 end
